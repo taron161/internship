@@ -1,0 +1,33 @@
+.btn {
+  display: block;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-endeavour;
+    box-shadow: inset 0 0 0 1px currentColor;
+  }
+
+  @include active {
+    background-color: $color-endeavour;
+    color: $color-default-white;
+    box-shadow: none;
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: $color-mischka;
+    color: $color-default-white;
+    box-shadow: none;
+    cursor: default;
+  }
+}
