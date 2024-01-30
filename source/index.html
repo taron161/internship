@@ -18,14 +18,14 @@
   <div class="wrapper">
     <div data-test="slider">
 
-      <header class="header">
+      <header class="header" data-header="container">
         <div class="container">
           <div class="header__container">
             <a class="header__link">
               <img src="img/svg/logotype.svg" alt="Лого" width="52" height="52">
             </a>
 
-            <button class="header__btn btn">
+            <button class="header__btn btn" type="button" data-header="toggle">
               меню
               <svg aria-hidden="true" focusable="false" width="20" height="20">
                 <use href="__spritemap#sprite-menu"></use>
@@ -119,26 +119,128 @@
       </header>
 
       <section class="hero">
+        <h1 class="visually-hidden">Проект "Стажировка"</h1>
+
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-pagination">
 
+            </div>
+
+            <!-- Слайд 1 -->
+            <div class="swiper-slide">
+              <div class="swiper__image">
+                <picture>
+                  <source type="image/webp" srcset="img/hero/photo-1.webp 1x, img/hero/photo-1@2x.webp 2x">
+                  <img src="img/hero/photo-1.jpg" srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="800" alt="Фотография студентки">
+                </picture>
+              </div>
+
+              <div class="container">
+                <div class="swiper__content">
+                  <h2>
+                    Глобальный профессиональный опыт обучения за рубежом
+                  </h2>
+
+                  <p>
+                    Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!
+                  </p>
+                </div>
+
+                <a class="btn" href="#">
+                  подробнее
+                  <svg aria-hidden="true" focusable="false" width="46" height="46">
+                    <use href="__spritemap#sprite-link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="swiper-slide">
+              <div class="swiper__image">
+                <picture>
+                  <source type="image/webp" srcset="img/hero/photo-2.webp 1x, img/hero/photo-2@2x.webp 2x">
+                  <img src="img/hero/photo-2.jpg" srcset="img/hero/photo-2@2x.jpg 2x" width="1440" height="800" alt="Группа волонтеров">
+                </picture>
+              </div>
+
+              <div class="container">
+                <div class="swiper__content">
+                  <h2>
+                    Волонтёрские программы - внесите свой вклад в общество
+                  </h2>
+
+                  <p>
+                    Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                  </p>
+                </div>
+
+                <a class="btn" href="#">
+                  подробнее
+                  <svg aria-hidden="true" focusable="false" width="46" height="46">
+                    <use href="__spritemap#sprite-link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="swiper-slide">
+              <div class="swiper__image">
+                <picture>
+                  <source type="image/webp" srcset="img/hero/photo-3.webp 1x, img/hero/photo-3@2x.webp 2x">
+                  <img src="img/hero/photo-3.jpg" srcset="img/hero/photo-3@2x.jpg 2x" width="1440" height="800" alt="Фотография студентов">
+                </picture>
+              </div>
+
+              <div class="container">
+                <div class="swiper__content">
+                  <h2>
+                    Программы стажировок в крупнейших компаниях мира
+                  </h2>
+
+                  <p>
+                    Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
+                  </p>
+                </div>
+
+                <a class="btn" href="#">
+                  подробнее
+                  <svg aria-hidden="true" focusable="false" width="46" height="46">
+                    <use href="__spritemap#sprite-link"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
+
     </div>
 
-    <div data-test="about" id="about"></div>
-    <div data-test="programs" id="programs"></div>
-    <div data-test="grant" id="grant"></div>
-    <div data-test="news" id="news"></div>
-    <div data-test="FAQ"></div>
-    <div data-test="reviews" id="reviews"></div>
-    <div data-test="contacts" id="contacts"></div>
-    <div data-test="form"></div>
-    <div data-test="footer"></div>
+    <main>
+
+      <div data-test="about" id="about"></div>
+      <div data-test="programs" id="programs"></div>
+      <div data-test="grant" id="grant"></div>
+      <div data-test="news" id="news"></div>
+      <div data-test="FAQ"></div>
+      <div data-test="reviews" id="reviews"></div>
+      <div data-test="contacts" id="contacts"></div>
+      <div data-test="form"></div>
+
+    </main>
+
+
+    <div data-test="footer">
+      <footer class="footer">
+
+      </footer>
+    </div>
   </div>
+
+  <script src="js/vendor.js" type="module"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 

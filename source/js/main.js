@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {openMneu} from './modules/open-menu/open-menu';
-
+import {heroSwiper} from './modules/swiper/swiper';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -23,5 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    heroSwiper.init();
   });
 });
