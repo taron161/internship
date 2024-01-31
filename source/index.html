@@ -20,98 +20,98 @@
 
       <header class="header" data-header="container">
         <div class="container">
-          <div class="header__container">
-            <a class="header__link">
-              <img src="img/svg/logotype.svg" alt="Лого" width="52" height="52">
-            </a>
+          <a class="header__link">
+            <img src="img/svg/logotype.svg" alt="Лого" width="52" height="52">
+          </a>
 
-            <button class="header__btn btn" type="button" data-header="toggle">
+          <nav class="header__nav menu" data-header="menu">
+            <button class="menu__btn btn" type="button" data-header="toggle">
               меню
-              <svg aria-hidden="true" focusable="false" width="20" height="20">
-                <use href="__spritemap#sprite-menu"></use>
-              </svg>
+              <span>
+                <svg aria-hidden="true" focusable="false" width="20" height="20">
+                  <use href="__spritemap#sprite-menu"></use>
+                </svg>
+              </span>
             </button>
-          </div>
 
-          <nav class="header__nav menu">
-            <ul class="menu__list">
+            <ul class="menu__list" data-accordion="parent">
 
               <!-- элемент 1 -->
               <li class="menu__item">
-                <a class="menu__link" href="#about">О проекте</a>
+                <a class="menu__link" href="#about" data-mneu="link">О проекте</a>
               </li>
 
               <!-- элемент 2 -->
-              <li class="menu__item">
-                <button class="menu__tab" type="button">
+              <li class="menu__item" data-accordion="element">
+                <button class="menu__tab" type="button" data-accordion="button">
                   Программы
                   <svg aria-hidden="true" focusable="false" width="12" height="12">
                     <use href="__spritemap#sprite-arrow-down"></use>
                   </svg>
                 </button>
-                <ul class="menu__submenu">
+                <ul class="menu__submenu" data-accordion="content">
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs">Стажировки</a>
+                    <a class="menu__submenu-link" href="#programs"  data-mneu="link">Стажировки</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs">Волонтёрство</a>
+                    <a class="menu__submenu-link" href="#programs" data-mneu="link">Волонтёрство</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs">Учёба</a>
+                    <a class="menu__submenu-link" href="#programs" data-mneu="link">Учёба</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs">Религия</a>
+                    <a class="menu__submenu-link" href="#programs" data-mneu="link">Религия</a>
                   </li>
                 </ul>
               </li>
 
               <!-- элемент 3 -->
               <li class="menu__item">
-                <a class="menu__link" href="#grant">как поехать</a>
+                <a class="menu__link" href="#grant" data-mneu="link">как поехать</a>
               </li>
 
               <!-- элемент 4 -->
               <li class="menu__item">
-                <a class="menu__link" href="#reviews">отзывы</a>
+                <a class="menu__link" href="#reviews" data-mneu="link">отзывы</a>
               </li>
 
               <!-- элемент 5 -->
-              <li class="menu__item">
-                <button class="menu__tab" type="button">
+              <li class="menu__item" data-accordion="element">
+                <button class="menu__tab" type="button" data-accordion="button">
                   новости
                   <svg aria-hidden="true" focusable="false" width="12" height="12">
                     <use href="__spritemap#sprite-arrow-down"></use>
                   </svg>
                 </button>
-                <ul class="menu__submenu">
+                <ul class="menu__submenu" data-accordion="content">
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news">Общее</a>
+                    <a class="menu__submenu-link" href="#news" data-mneu="link">Общее</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news">Волонтёрство</a>
+                    <a class="menu__submenu-link" href="#news" data-mneu="link">Волонтёрство</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news">Стажировки</a>
+                    <a class="menu__submenu-link" href="#news" data-mneu="link">Стажировки</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news">Карьера</a>
+                    <a class="menu__submenu-link" href="#news" data-mneu="link">Карьера</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news">Путешествия</a>
+                    <a class="menu__submenu-link" href="#news" data-mneu="link">Путешествия</a>
                   </li>
                 </ul>
               </li>
 
               <!-- элемент 6 -->
               <li class="menu__item">
-                <a class="menu__link" href="#contacts">контакты</a>
+                <a class="menu__link" href="#contacts" data-mneu="link">контакты</a>
               </li>
             </ul>
           </nav>
@@ -149,9 +149,11 @@
 
                 <a class="btn" href="#">
                   подробнее
-                  <svg aria-hidden="true" focusable="false" width="46" height="46">
-                    <use href="__spritemap#sprite-link"></use>
-                  </svg>
+                  <span>
+                    <svg aria-hidden="true" focusable="false" width="8" height="8">
+                      <use href="__spritemap#sprite-link"></use>
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>
@@ -178,9 +180,11 @@
 
                 <a class="btn" href="#">
                   подробнее
-                  <svg aria-hidden="true" focusable="false" width="46" height="46">
-                    <use href="__spritemap#sprite-link"></use>
-                  </svg>
+                  <span>
+                    <svg aria-hidden="true" focusable="false" width="8" height="8">
+                      <use href="__spritemap#sprite-link"></use>
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>
@@ -207,9 +211,11 @@
 
                 <a class="btn" href="#">
                   подробнее
-                  <svg aria-hidden="true" focusable="false" width="46" height="46">
-                    <use href="__spritemap#sprite-link"></use>
-                  </svg>
+                  <span>
+                    <svg aria-hidden="true" focusable="false" width="8" height="8">
+                      <use href="__spritemap#sprite-link"></use>
+                    </svg>
+                  </span>
                 </a>
               </div>
             </div>
