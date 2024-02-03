@@ -1,0 +1,11 @@
+.main-wrapper {
+  gap: 120px;
+
+  @include vp-1439 {
+    gap: 100px;
+  }
+
+  @include vp-767 {
+    gap: 60px;
+  }
+}
