@@ -60,14 +60,17 @@
     color: $color-mischka;
     box-shadow: inset 0 0 0 1px $color-mischka;
     cursor: default;
+  }
 
-    span {
-      background-color: $color-mischka;
-      color: $color-default-white;
-    }
+  &:disabled span,
+  &--disabled span {
+    background-color: $color-mischka;
+    color: $color-default-white;
   }
 
   &--main {
+    background-color: $color-transparent;
+
     @include vp-767 {
       font-size: 12px;
       line-height: 12px;
@@ -77,10 +80,6 @@
         width: 34px;
         height: 34px;
       }
-    }
-
-    svg {
-      transition: transform $trans-default;
     }
 
     @include hover-focus {
@@ -94,5 +93,9 @@
         transform: rotate(45deg);
       }
     }
+  }
+
+  &--main svg {
+    transition: transform $trans-default;
   }
 }

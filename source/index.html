@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Сайт проекта «Стажировка»">
   <title>Internship</title>
   <link rel="stylesheet" href="sass/style.scss">
   <link rel="icon" href="favicon.ico">
@@ -262,13 +263,13 @@
                 <div class="about__content">
                   <h3>Наша цель</h3>
                   <p>
-                    Наша деятельность направлена<br> на повышение квалификации молодых специалистов на ранних
-                    и средних стадиях карьеры, предоставляя<br> им инструменты для решения сложных проблем,
+                    Наша деятельность направлена <br>на повышение квалификации молодых специалистов на ранних
+                    и средних стадиях карьеры, предоставляя <br>им инструменты для решения сложных проблем,
                     с которыми сталкиваются в мире. Цель центра — наделить этих людей способностью инициировать
                     значимые изменения.
                   </p>
                 </div>
-                <button class="about__btn btn btn--main">
+                <button class="about__btn btn btn--main" type="button" data-open-modal="success">
                   подробнее о проекте
                   <span>
                     <svg aria-hidden="true" focusable="false" width="10" height="10">
@@ -310,7 +311,7 @@
                   <div class="advantages__content advantages__content--participant">
                     <h3>Более<br> 3000 участников</h3>
                     <p>
-                      уже успешно прошли программу<br> от «Стажировка»<br> и остались в разных странах
+                      уже успешно прошли программу <br>от «Стажировка» <br>и остались в разных странах
                     </p>
                   </div>
                 </li>
@@ -326,7 +327,7 @@
                   <div class="advantages__content advantages__content--money">
                     <h3>от 4 200 $ до 8 400 $</h3>
                     <p>
-                      грант всем участникам<br> для комфортного прохождения программы
+                      грант всем участникам <br>для комфортного прохождения программы
                     </p>
                   </div>
                 </li>
@@ -342,7 +343,7 @@
                   <div class="advantages__content advantages__content--country">
                     <h3>участники из 60 стран</h3>
                     <p>
-                      студенты со всего<br> мира приезжают<br> на программу «Стажировка»
+                      студенты со всего <br>мира приезжают <br>на программу «Стажировка»
                     </p>
                   </div>
                 </li>
@@ -375,6 +376,75 @@
 
     </footer>
 
+  </div>
+
+  <!-- Модалка -->
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <div class="form">
+          <span class="form__title">Напишите нам</span>
+          <p class="form__text">Оставьте ваши контакты, <br>если у вас остались вопросы — мы на них ответим!</p>
+
+          <div class="form__container">
+
+            <form action="https://echo.htmlacademy.ru" method="post">
+
+              <p class="form__group" data-validate-type="text" data-limitation="name" data-on-input-validate
+              data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
+              </p>
+
+              <p class="form__group" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"
+              data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+              </p>
+
+              <p class="form__group">
+                <label for="city">Телефон</label>
+                <select name="city" id="city" value="">
+                  <option value=""></option>
+                  <option value="Moskow">Москва</option>
+                  <option value="St. Petersburg">Санкт-Петерберг</option>
+                  <option value="Nizhny Novgorod">Нижний Новгород</option>
+                  <option value="Rostov-on-Don">Ростов-на-Дону</option>
+                  <option value="Kaluga">Калуга</option>
+                </select>
+                <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <use href="__spritemap#sprite-arrow-down"></use>
+                </svg>
+              </p>
+
+              <p class="form__checkbox">
+                <input type="checkbox" name="agreement" id="checkbox" required>
+                <label for="checkbox">Я согласен на обработку моих персональных данных</label>
+              </p>
+
+              <button class="form__btn btn btn--main" type="submit">
+                отправить
+                <span>
+                  <svg aria-hidden="true" focusable="false" width="10" height="10">
+                    <use href="__spritemap#sprite-link"></use>
+                  </svg>
+                </span>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="18" height="18">
+            <use xlink:href="__spritemap#sprite-cross"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 
   <script src="js/vendor.js" type="module"></script>

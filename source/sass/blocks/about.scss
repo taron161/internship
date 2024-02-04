@@ -110,14 +110,14 @@
       margin-bottom: 25px;
       width: 290px;
     }
+  }
+}
 
-    br {
-      display: none;
+.about__content p br {
+  display: none;
 
-      @include vp-767 {
-        display: block;
-      }
-    }
+  @include vp-767 {
+    display: block;
   }
 }
 

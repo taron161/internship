@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './modules/form-validate/form';
+import {Form} from './vendor/form-validate/form';
+import {initModals} from './vendor/modals/init-modals';
 import {clickToggleButton} from './modules/header/open-menu';
 import {scrollPage} from './modules/header/header-hide';
 import {heroSwiper} from './modules/swiper/swiper';
@@ -28,6 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    initModals();
 
     initAccordions();
 

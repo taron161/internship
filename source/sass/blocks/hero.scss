@@ -13,7 +13,6 @@
 .hero__image {
   img {
     position: absolute;
-    width: 100%;
     top: 0;
     left: 0;
     z-index: -1;
@@ -88,7 +87,7 @@
 
   @include vp-1439 {
     width: 591px;
-    padding: 0 40px 35px 40px;
+    padding: 0 40px 35px;
   }
 
   @include vp-767 {
@@ -102,7 +101,7 @@
 .hero__text {
   @include vp-767 {
     width: 267px;
-    border-radius: 0 0 14px 0;
+    border-radius: 0 0 14px;
     padding: 0 42px 15px 14px;
     background-color: $color-default-white;
   }

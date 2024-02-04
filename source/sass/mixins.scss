@@ -7,7 +7,7 @@
 }
 
 @mixin focus {
-  &.focus-visible:focus {
+  &:focus {
     @content;
   }
 }
@@ -25,8 +25,15 @@
     }
   }
 
-  &.focus-visible:focus,
-	&:focus-visible {
+  &:focus,
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin disabled {
+  &:disabled,
+  &--disabled {
     @content;
   }
 }

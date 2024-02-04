@@ -1,5 +1,6 @@
 .main-wrapper {
   gap: 120px;
+  background-color: $color-alabaster;
 
   @include vp-1439 {
     gap: 100px;
