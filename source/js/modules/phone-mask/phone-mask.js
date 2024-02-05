@@ -10,23 +10,14 @@ const replacePhoneValue = (el) => {
   if (def.length >= val.length) {
     val = def;
   }
-  el.value = matrix.replace(/./g, (a) => {
+  el.value = matrix.replace(/./g, (a) =>
     // eslint-disable-next-line no-nested-ternary
-    return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
-  });
+    /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a
+  );
 };
 
 const onInputPhoneInput = ({target}) => {
   replacePhoneValue(target);
-};
-
-const onFocusPhoneInput = ({target}) => {
-  if (!target.value) {
-    target.value = COUNTRY_CODE;
-    target.addEventListener('input', onInputPhoneInput);
-    target.addEventListener('blur', onBlurPhoneInput);
-    target.addEventListener('keydown', onKeydownPhoneInput);
-  }
 };
 
 const onKeydownPhoneInput = (e) => {
@@ -46,6 +37,15 @@ const onBlurPhoneInput = ({target}) => {
     target.value = '';
     target.removeEventListener('input', onInputPhoneInput);
     target.removeEventListener('blur', onBlurPhoneInput);
+  }
+};
+
+const onFocusPhoneInput = ({target}) => {
+  if (!target.value) {
+    target.value = COUNTRY_CODE;
+    target.addEventListener('input', onInputPhoneInput);
+    target.addEventListener('blur', onBlurPhoneInput);
+    target.addEventListener('keydown', onKeydownPhoneInput);
   }
 };
 
