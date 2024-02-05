@@ -140,3 +140,29 @@
     color: $color-default-white;
   }
 }
+
+.contacts__link {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-default-white;
+    bottom: -4px;
+    left: 0;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  @include hover-focus {
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  @include active {
+    opacity: 80%;
+  }
+}

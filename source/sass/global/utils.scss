@@ -105,3 +105,9 @@
     display: block;
   }
 }
+
+.input-message.is-invalid {
+  color: #ff5e66;
+  font-size: 12px;
+  line-height: 14px;
+}

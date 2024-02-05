@@ -617,12 +617,12 @@
 
                   <div class="contacts__group">
                     <dt class="contacts__name">Телефон</dt>
-                    <dd class="contacts__text"><a href="tel:+796387687676">+7 963 876 876 76</a></dd>
+                    <dd class="contacts__text"><a class="contacts__link" href="tel:+796387687676">+7 963 876 876 76</a></dd>
                   </div>
 
                   <div class="contacts__group">
                     <dt class="contacts__name">Email</dt>
-                    <dd class="contacts__text"><a href="mailto:Info@stazh.ru">Info@stazh.ru</a></dd>
+                    <dd class="contacts__text"><a class="contacts__link" href="mailto:Info@stazh.ru">Info@stazh.ru</a></dd>
                   </div>
                 </dl>
 
@@ -631,11 +631,11 @@
               <div class="contacts__map">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/map/mobile/map.webp 1x, img/map/mobile/map@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1365px)" srcset="img/map/tablet/map.webp 1x, img/map/tablet/map@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="img/map/tablet/map.webp 1x, img/map/tablet/map@2x.webp 2x">
                   <source type="image/webp" srcset="img/map/map.webp 1x, img/map/map@2x.webp 2x">
 
                   <source type="image/jpg" media="(max-width: 767px)" srcset="img/map/mobile/map.jpg 1x, img/map/mobile/map@2x.jpg 2x">
-                  <source type="image/jpg" media="(max-width: 1365px)" srcset="img/map/tablet/map.jpg 1x, img/map/tablet/map@2x.jpg 2x">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/map/tablet/map.jpg 1x, img/map/tablet/map@2x.jpg 2x">
                   <img src="img/map/map.jpg" srcset="img/map/map@2x.jpg 2x" width="1240" height="500" alt="Карта местонахождения">
                 </picture>
               </div>
@@ -646,7 +646,91 @@
 
         </div>
 
-        <div data-test="form"></div>
+        <div data-test="form">
+
+          <section class="feedback">
+
+            <div class="container">
+
+              <div class="feedback__bg">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/form/mobile/bg.webp 1x, img/form/mobile/bg@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="img/form/tablet/bg.webp 1x, img/form/tablet/bg@2x.webp 2x">
+                  <source type="image/webp" srcset="img/form/bg.webp 1x, img/form/bg@2x.webp 2x">
+
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/form/mobile/bg.jpg 1x, img/form/mobile/bg@2x.jpg 2x">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/form/tablet/bg.jpg 1x, img/form/tablet/bg@2x.jpg 2x">
+                  <img src="img/form/bg.jpg" srcset="img/form/bg@2x.jpg 2x" width="1240" height="803" alt="">
+                </picture>
+              </div>
+
+              <div class="feedback__form form">
+
+                <h2 class="form__title form__title--dark">Напишите нам</h2>
+                <p class="form__text form__text--dark">Оставьте ваши контакты, <br>если у вас остались вопросы — мы на них ответим!</p>
+
+                <div class="form__container" data-form-validate="true">
+
+                  <form action="https://echo.htmlacademy.ru" method="post" target="_blank">
+
+                    <p class="form__group input-group input-group--dark" data-validate-type="text" data-limitation="name" data-limitation="letters" data-on-input-validate
+                    data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <input type="text" id="name" name="name" required>
+                      <label for="name">Имя</label>
+                    </p>
+
+                    <p class="form__group input-group input-group--dark" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"
+                    data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                      <input type="tel" id="phone" name="phone" required>
+                      <label for="phone">Телефон</label>
+                    </p>
+
+                    <p class="form__group input-group input-group--dark input-group--textarea" data-validate-type="text" data-on-input-validate
+                    data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                      <textarea type="text" id="text" name="text" required></textarea>
+                      <label for="text">Ваше сообщение</label>
+                    </p>
+
+                    <p class="form__group input-group input-group--dark">
+                      <select name="city" id="city" required>
+                        <option value="" label="   "></option>
+                        <option value="Moskow">Москва</option>
+                        <option value="St. Petersburg">Санкт-Петербург</option>
+                        <option value="Nizhny Novgorod">Нижний Новгород</option>
+                        <option value="Rostov-on-Don">Ростов-на-Дону</option>
+                        <option value="Kaluga">Калуга</option>
+                      </select>
+                      <label for="city">Выберите город</label>
+                      <svg aria-hidden="true" focusable="false" width="16" height="16">
+                        <use href="__spritemap#sprite-arrow-down"></use>
+                      </svg>
+                    </p>
+
+                    <p class="form__checkbox checkbox checkbox--dark" data-validate-type="checkbox">
+                      <input type="checkbox" name="agreement" id="agreement" required>
+                      <label for="agreement">Я согласен на обработку моих персональных данных</label>
+                    </p>
+
+                    <button class="form__btn form__btn--dark btn btn--main btn--dark" type="submit">
+                      отправить
+                      <span>
+                        <svg aria-hidden="true" focusable="false" width="10" height="10">
+                          <use href="__spritemap#sprite-link"></use>
+                        </svg>
+                      </span>
+                    </button>
+
+                  </form>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
 
       </div>
 
@@ -672,26 +756,26 @@
 
         <div class="form">
 
-          <span class="form__title">Напишите нам</span>
+          <h2 class="form__title">Напишите нам</h2>
           <p class="form__text">Оставьте ваши контакты, <br>если у вас остались вопросы — мы на них ответим!</p>
 
-          <div class="form__container">
+          <div class="form__container" data-form-validate="true">
 
             <form action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
-              <p class="form__group" data-validate-type="text" data-limitation="name" data-on-input-validate
+              <p class="form__group input-group" data-validate-type="text" data-limitation="name" data-on-input-validate
               data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
                 <input type="text" id="name" name="name" required>
                 <label for="name">Имя</label>
               </p>
 
-              <p class="form__group" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"
+              <p class="form__group input-group" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"
               data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
                 <input type="tel" id="phone" name="phone" required>
                 <label for="phone">Телефон</label>
               </p>
 
-              <p class="form__group">
+              <p class="form__group input-group">
                 <select name="city" id="city" required>
                   <option value="" label="   "></option>
                   <option value="Moskow">Москва</option>
@@ -706,7 +790,7 @@
                 </svg>
               </p>
 
-              <p class="form__checkbox">
+              <p class="form__checkbox checkbox">
                 <input type="checkbox" name="agreement" id="checkbox" required>
                 <label for="checkbox">Я согласен на обработку моих персональных данных</label>
               </p>

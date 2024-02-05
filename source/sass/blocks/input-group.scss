@@ -1,0 +1,194 @@
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: start;
+  gap: 12px;
+  width: 100%;
+  margin: 0;
+
+  @include vp-767 {
+    gap: 8px;
+  }
+
+  label {
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.8;
+
+    @include vp-1439 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      line-height: 14px;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgba($color: $color-charcoal, $alpha: 0.3);
+    background: $color-transparent;
+    border-radius: 8px;
+    height: 50px;
+    padding: 5px 20px 5px 25px;
+    font-size: 16px;
+    line-height: 18px;
+    color: $color-charcoal;
+
+    @include vp-767 {
+      height: 44px;
+    }
+
+    @include focus {
+      box-shadow: inset 0 0 0 1px $color-charcoal;
+    }
+
+    &:focus + label {
+      opacity: 1;
+    }
+
+    @include active {
+      box-shadow: inset 0 0 0 1px $color-charcoal;
+      background: $color-transparent;
+    }
+
+    &:active + label {
+      opacity: 1;
+    }
+
+    @include disabled {
+      box-shadow: inset 0 0 0  1px rgba($color: $color-mischka, $alpha: 0.5);
+      background-color: rgba($color: $color-mischka, $alpha: 0.2);
+      pointer-events: none;
+
+      &:disabled + label {
+        color: $color-mischka;
+        opacity: 0.6;
+      }
+    }
+
+    &:invalid:focus {
+      box-shadow: inset 0 0 0 1px #ff5e66;
+      background: rgba($color: #ff5e66, $alpha: 0.2);
+    }
+  }
+
+  @include active {
+    &:not(:has(:disabled)) {
+      label {
+        opacity: 1;
+      }
+
+      input,
+      select,
+      textarea {
+        box-shadow: inset 0 0 0 1px $color-charcoal;
+      }
+    }
+  }
+
+  @include hover {
+    &:not(:has(:disabled)) {
+      label {
+        opacity: 1;
+      }
+
+      input,
+      select,
+      textarea {
+        box-shadow: inset 0 0 0 1px $color-charcoal;
+      }
+    }
+  }
+
+  select {
+    appearance: none;
+
+    &:active ~ svg,
+    &:focus ~ svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  select option:first-child {
+    display: none;
+  }
+
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 47px;
+
+    @include vp-767 {
+      top: 40px;
+    }
+  }
+
+  &--textarea  textarea {
+    resize: none;
+    height: 98px;
+    overflow-y: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--dark {
+    color: $color-alabaster;
+
+    input,
+    select,
+    textarea {
+      color: $color-default-white;
+      box-shadow: inset 0 0 0 1px rgba($color: $color-alabaster, $alpha: 0.3);
+
+      @include focus {
+        box-shadow: inset 0 0 0 1px $color-alabaster;
+      }
+
+      @include active {
+        box-shadow: inset 0 0 0 1px $color-alabaster;
+      }
+
+      @include disabled {
+        box-shadow: inset 0 0 0  1px rgba($color: $color-default-white, $alpha: 0.4);
+        background-color: rgba($color: $color-default-white, $alpha: 0.2);
+
+        &:disabled + label {
+          color: $color-alabaster;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    @include active {
+      &:not(:has(:disabled)) {
+        input,
+        select,
+        textarea {
+          box-shadow: inset 0 0 0 1px $color-default-white;
+        }
+      }
+    }
+
+    @include hover {
+      &:not(:has(:disabled)) {
+        label {
+          opacity: 1;
+        }
+
+        input,
+        select,
+        textarea {
+          box-shadow: inset 0 0 0 1px $color-default-white;
+        }
+      }
+    }
+  }
+}

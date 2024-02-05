@@ -130,7 +130,7 @@
   border-radius: 16px;
   box-shadow: inset 0 0 0 1px currentColor;
   cursor: pointer;
-  transition: background-color $trans-default;
+  transition: background-color $trans-modal;
 
   @include vp-1439 {
     padding: 30px;
