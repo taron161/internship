@@ -17,6 +17,7 @@
   cursor: pointer;
   box-shadow: inset 0 0 0 1px $color-cerulean-blue;
   transition: color $trans-default;
+  user-select: none;
 
   span {
     display: flex;

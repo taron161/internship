@@ -1,0 +1,12 @@
+.reviews {
+  height: 618px;
+  background-color: #ccc;
+
+  @include vp-1439 {
+    height: 547px;
+  }
+
+  @include vp-767 {
+    height: 490px;
+  }
+}

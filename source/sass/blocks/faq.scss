@@ -1,0 +1,288 @@
+.faq {
+  color: $color-cerulean-blue;
+}
+
+.faq__title {
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 67px;
+  padding-top: 3px;
+  padding-right: 1px;
+
+  @include vp-1439 {
+    font-size: 34px;
+    margin-bottom: 40px;
+    padding-top: 0;
+    padding-right: 0;
+    transform: translateY(-1px);
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 35px;
+    transform: none;
+    transform: translateY(2px);
+  }
+}
+
+.faq__accordion {
+  width: 1028px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include vp-1439 {
+    width: 100%;
+  }
+}
+
+.faq__element {
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+.faq__element--study .faq__question-text,
+.faq__element--registration .faq__question-text{
+  transform: translateY(-10px);
+
+  @include vp-1439 {
+    transform: translateY(-12px);
+  }
+
+  @include vp-767 {
+    transform: none;
+  }
+}
+
+.faq__element--study .faq__container,
+.faq__element--registration .faq__container{
+  padding-bottom: 26px;
+
+  @include vp-1439 {
+    padding-bottom: 20px;
+  }
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  pointer-events: none;
+
+  @include vp-767 {
+    align-items: center;
+  }
+
+  button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    cursor: pointer;
+    transition: color $trans-default;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 1px;
+      background-color: currentColor;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 1px;
+      background-color: currentColor;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      transition: width $trans-default;
+    }
+  }
+}
+
+.faq__container {
+  position: relative;
+  z-index: 10;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px currentColor;
+  cursor: pointer;
+  transition: background-color $trans-default;
+
+  @include vp-1439 {
+    padding: 30px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+    border-radius: 14px;
+  }
+
+  @include hover {
+    background-color: $color-default-white;
+
+    button {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px currentColor;
+      color: currentColor;
+    }
+  }
+
+  @include active {
+    color: #275699;
+
+    button::after,
+    button::before {
+      background-color: $color-default-white;
+    }
+
+    button {
+      background-color: #275699;
+      box-shadow: none;
+    }
+  }
+
+  &:focus-within {
+    background-color: $color-default-white;
+
+    button {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+      color: $color-cerulean-blue;
+    }
+  }
+}
+
+.faq__element.is-active {
+  button {
+    background-color: $color-default-white;
+    box-shadow: none;
+    color: $color-cerulean-blue;
+  }
+
+  button::after {
+    width: 0;
+  }
+}
+
+.faq__element.is-active .faq__container {
+  background-color: $color-cerulean-blue;
+
+  @include hover {
+    box-shadow: 0 0 0 2px $color-default-white;
+
+    button {
+      background-color: $color-cerulean-blue;
+      box-shadow: inset 0 0 0 1px $color-default-white;
+      color: $color-default-white;
+    }
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px $color-default-white;
+
+    button {
+      background-color: $color-cerulean-blue;
+      box-shadow: inset 0 0 0 1px $color-default-white;
+      color: $color-default-white;
+    }
+  }
+
+  @include active {
+    box-shadow: none;
+    background-color: #275699;
+
+    button {
+      background-color: $color-default-white;
+      box-shadow: none;
+    }
+
+    button::after,
+    button::before {
+      background-color: #275699;
+    }
+  }
+}
+
+.faq__element.is-active .faq__question-text h3 {
+  color: $color-default-white;
+}
+
+.faq__element.is-active .faq__container{
+  padding-bottom: 33px;
+
+  @include vp-1439 {
+    padding-bottom: 26px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 15px;
+  }
+}
+
+.faq__question-text h3 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  transform: translateY(2px);
+
+  @include vp-1439 {
+    font-size: 22px;
+    line-height: 26px;
+    transform: translateY(7px);
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+    transform: none;
+  }
+}
+
+.faq__content p {
+  color: $color-alabaster;
+
+  @include vp-1439 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.faq__element.is-active .faq__content {
+  margin-top: 13px;
+
+  @include vp-1439 {
+    margin-top: 16px;
+  }
+
+  @include vp-767 {
+    margin-top: 15px;
+  }
+}

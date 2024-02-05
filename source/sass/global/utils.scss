@@ -65,3 +65,43 @@
     background-color: rgba(13, 29, 51, 0.4);
   }
 }
+
+.br-mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.br-tablet {
+  display: none;
+
+  @include vp-1439 {
+    display: block;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.br-desktop {
+  @include vp-1439 {
+    display: none;
+  }
+}
+
+.br-desktop-tablet {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.br-tablet-mobile {
+  display: none;
+
+  @include vp-1439 {
+    display: block;
+  }
+}
