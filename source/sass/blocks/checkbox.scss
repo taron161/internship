@@ -1,5 +1,6 @@
 .checkbox {
   margin: 0;
+  margin-right: auto;
 
   label {
     position: relative;
@@ -16,13 +17,6 @@
 
     @include hover-focus {
       &::after {
-        box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-      }
-    }
-
-    @include disabled {
-      &::after {
-        background-color: rgba($color: $color-default-white, $alpha: 0.6);
         box-shadow: inset 0 0 0 1px $color-cerulean-blue;
       }
     }
@@ -79,10 +73,10 @@
       position: absolute;
       content: "";
       z-index: 10;
-      top: 3px;
-      left: 5px;
-      width: 10px;
-      height: 6px;
+      top: 4.5px;
+      left: 6px;
+      width: 9px;
+      height: 5px;
       background-color: $color-transparent;
       border-bottom: 1px solid $color-default-white;
       border-left: 1px solid $color-default-white;
@@ -114,7 +108,7 @@
 
 .checkbox input:checked:disabled {
   +label::after {
-    background-color: #a9afb7;
+    background-color: $color-mischka;
     box-shadow: none;
   }
 
@@ -124,5 +118,61 @@
 
   +label {
     pointer-events: none;
+  }
+}
+
+.checkbox--dark {
+  margin-bottom: 19px;
+
+  @include vp-1439 {
+    transform: translateY(-2px);
+  }
+
+  @include vp-767 {
+    transform: translateY(-10px);
+    margin-bottom: -13px;
+  }
+}
+
+.checkbox--dark label {
+  &::after {
+    box-shadow: inset 0 0 0 1px rgba($color: $color-default-white, $alpha: 0.7);
+  }
+
+  @include hover-focus {
+    &::after {
+      box-shadow: inset 0 0 0 1px $color-default-white;
+      background-color: $color-transparent;
+    }
+  }
+}
+
+.checkbox--dark input {
+  @include hover-focus {
+    +label::after {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-default-white;
+    }
+
+    +label::before {
+      border-color: $color-default-white;
+    }
+  }
+
+  @include disabled {
+    +label::after {
+      background-color: rgba($color: $color-default-white, $alpha: 0.6);
+      box-shadow: inset 0 0 0 1px $color-default-white;
+    }
+  }
+
+  &:checked {
+    +label::after {
+      background-color: $color-default-white;
+    }
+
+    +label::before {
+      border-color: $color-cerulean-blue;
+    }
   }
 }

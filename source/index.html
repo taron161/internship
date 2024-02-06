@@ -667,31 +667,32 @@
               <div class="feedback__form form">
 
                 <h2 class="form__title form__title--dark">Напишите нам</h2>
-                <p class="form__text form__text--dark">Оставьте ваши контакты, <br>если у вас остались вопросы — мы на них ответим!</p>
+                <p class="form__text form__text--dark">Оставьте ваши контакты, если у вас остались вопросы — <br class="br-mobile">мы на них ответим!</p>
 
-                <div class="form__container" data-form-validate="true">
+                <div class="form__container" data-form-validate="true" data-form="feedback">
 
                   <form action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
-                    <p class="form__group input-group input-group--dark" data-validate-type="text" data-limitation="name" data-limitation="letters" data-on-input-validate
-                    data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
+                    <p class="form__group input-group input-group--dark" data-validate-type="text" data-limitation="letters" data-on-input-validate
+                    data-message-base="Введите Ваше имя" data-required>
                       <input type="text" id="name" name="name" required>
                       <label for="name">Имя</label>
                     </p>
 
-                    <p class="form__group input-group input-group--dark" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"
-                    data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
+                    <p class="form__group input-group input-group--dark" data-validate-type="phone"
+                    data-on-input-validate data-message-base="Введите номер телефона" data-required>
                       <input type="tel" id="phone" name="phone" required>
                       <label for="phone">Телефон</label>
                     </p>
 
                     <p class="form__group input-group input-group--dark input-group--textarea" data-validate-type="text" data-on-input-validate
-                    data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
-                      <textarea type="text" id="text" name="text" required></textarea>
+                    data-message-base="Отсутствует текст сообщения" data-required>
+                      <textarea id="text" name="text" required></textarea>
                       <label for="text">Ваше сообщение</label>
                     </p>
 
-                    <p class="form__group input-group input-group--dark">
+                    <p class="form__group input-group input-group--dark" data-message-base="Выберите свой город"
+                    data-on-input-validate data-required>
                       <select name="city" id="city" required>
                         <option value="" label="   "></option>
                         <option value="Moskow">Москва</option>
@@ -706,8 +707,9 @@
                       </svg>
                     </p>
 
-                    <p class="form__checkbox checkbox checkbox--dark" data-validate-type="checkbox">
-                      <input type="checkbox" name="agreement" id="agreement" required>
+                    <p class="form__checkbox checkbox checkbox--dark" data-validate-type="checkbox"
+                    data-on-input-validate data-message-base="Нужно поставить галочку" data-required>
+                      <input type="checkbox" name="agreement" id="agreement" required checked>
                       <label for="agreement">Я согласен на обработку моих персональных данных</label>
                     </p>
 
@@ -759,24 +761,25 @@
           <h2 class="form__title">Напишите нам</h2>
           <p class="form__text">Оставьте ваши контакты, <br>если у вас остались вопросы — мы на них ответим!</p>
 
-          <div class="form__container" data-form-validate="true">
+          <div class="form__container" data-form-validate="true" data-form="modal">
 
             <form action="https://echo.htmlacademy.ru" method="post" target="_blank">
 
-              <p class="form__group input-group" data-validate-type="text" data-limitation="name" data-on-input-validate
-              data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-required>
-                <input type="text" id="name" name="name" required>
-                <label for="name">Имя</label>
+              <p class="form__group input-group" data-validate-type="text" data-limitation="letters" data-on-input-validate
+              data-message-base="Введите Ваше имя" data-required>
+                <input type="text" id="modal-name" name="name" required>
+                <label for="modal-name">Имя</label>
               </p>
 
-              <p class="form__group input-group" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению"
-              data-message-extra="Проверьте корректность заполнения поля" data-message-success="Поле заполнено верно" data-required>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="phone">Телефон</label>
+              <p class="form__group input-group" data-validate-type="phone"
+              data-on-input-validate data-message-base="Введите номер телефона" data-required>
+                <input type="tel" id="modal-phone" name="phone" required>
+                <label for="modal-phone">Телефон</label>
               </p>
 
-              <p class="form__group input-group">
-                <select name="city" id="city" required>
+              <p class="form__group input-group" data-message-base="Выберите свой город"
+              data-on-input-validate data-required>
+                <select name="city" id="modal-city" required>
                   <option value="" label="   "></option>
                   <option value="Moskow">Москва</option>
                   <option value="St. Petersburg">Санкт-Петербург</option>
@@ -784,18 +787,19 @@
                   <option value="Rostov-on-Don">Ростов-на-Дону</option>
                   <option value="Kaluga">Калуга</option>
                 </select>
-                <label for="city">Выберите город</label>
+                <label for="modal-city">Выберите город</label>
                 <svg aria-hidden="true" focusable="false" width="16" height="16">
                   <use href="__spritemap#sprite-arrow-down"></use>
                 </svg>
               </p>
 
-              <p class="form__checkbox checkbox">
-                <input type="checkbox" name="agreement" id="checkbox" required>
+              <p class="form__checkbox checkbox" data-validate-type="checkbox"
+              data-on-input-validate data-message-base="Нужно поставить галочку" data-required>
+                <input type="checkbox" name="checkbox" id="checkbox" required>
                 <label for="checkbox">Я согласен на обработку моих персональных данных</label>
               </p>
 
-              <button class="form__btn btn btn--main" type="submit">
+              <button class="form__btn btn btn--main" type="submit" data-modal="submit">
                 отправить
                 <span>
                   <svg aria-hidden="true" focusable="false" width="10" height="10">

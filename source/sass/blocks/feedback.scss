@@ -1,10 +1,5 @@
 .feedback {
   width: 100%;
-  min-height: 803px;
-
-  @include vp-1439 {
-    min-height: 780px;
-  }
 
   @include vp-767 {
     position: relative;
@@ -12,52 +7,59 @@
 
   .container {
     position: relative;
+    max-width: 1240px;
+    padding: 0;
+
+    @include vp-1439 {
+      max-width: 678px;
+    }
 
     @include vp-767 {
       position: static;
-      min-height: 753px;
     }
   }
 }
 
 .feedback__bg img {
   position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 803px;
+  height: 100%;
+  min-height: 803px;
   border-radius: 16px;
   background-color: $color-cerulean-blue;
   object-fit: cover;
 
   @include vp-1439 {
-    height: 780px;
+    min-height: 780px;
   }
 
   @include vp-767 {
-    height: 753px;
+    min-height: 753px;
   }
 }
 
 .feedback__form {
-  position: absolute;
-  z-index: 100;
-  width: 498px;
+  position: relative;
+  z-index: 10;
   left: 0;
-  top: 0;
+  width: 498px;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
   color: $color-default-white;
-  padding: 70px 74px 41px;
+  padding: 82px 74px 41px;
 
   @include vp-1439 {
     width: 442px;
-    padding: 50px 45px 58px;
+    padding: 60px 45px 58px;
   }
 
   @include vp-767 {
     position: relative;
     width: 290px;
     margin: 0 auto;
+    padding: 53px 15px 50px;
   }
 }

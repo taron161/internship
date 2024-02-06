@@ -7,6 +7,7 @@ import {heroSwiper} from './modules/swiper/swiper';
 import {initAccordions} from './vendor/accordion/init-accordion';
 import {initPhoneMask} from './modules/phone-mask/phone-mask';
 import {listNumeration} from './modules/grant/grant-list';
+import {submitForm} from './modules/form/submit-form';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +28,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Нумерация списка в блоке "Grant"
   listNumeration();
+
+  // Валидация и отправка формы
+  submitForm();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

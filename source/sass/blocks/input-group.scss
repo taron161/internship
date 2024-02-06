@@ -15,13 +15,16 @@
     font-size: 14px;
     line-height: 18px;
     opacity: 0.8;
+    transform: translateY(4px);
 
     @include vp-1439 {
       line-height: 20px;
+      transform: translateY(5px);
     }
 
     @include vp-767 {
       line-height: 14px;
+      transform: translateY(-3px);
     }
   }
 
@@ -108,6 +111,22 @@
 
   select {
     appearance: none;
+    transform: translateY(2px);
+    margin-bottom: 5px;
+
+    @include vp-1439 {
+      transform: translateY(-2px);
+
+      +label {
+        transform: translateY(3px);
+      }
+    }
+
+    @include vp-767 {
+      +label {
+        transform: translateY(-5px);
+      }
+    }
 
     &:active ~ svg,
     &:focus ~ svg {
@@ -122,14 +141,18 @@
   svg {
     position: absolute;
     right: 20px;
-    top: 47px;
+    top: 49px;
+
+    @include vp-1439 {
+      top: 47px;
+    }
 
     @include vp-767 {
-      top: 40px;
+      top: 37px;
     }
   }
 
-  &--textarea  textarea {
+  &--textarea textarea {
     resize: none;
     height: 98px;
     overflow-y: hidden;
@@ -137,57 +160,73 @@
     padding-bottom: 15px;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 2px;
+
+    @include vp-767 {
+      height: 94px;
+    }
   }
 
-  &--dark {
-    color: $color-alabaster;
+  &--dark label {
+    @include vp-767 {
+      font-size: 12px;
+    }
+  }
+}
 
-    input,
-    select,
-    textarea {
-      color: $color-default-white;
-      box-shadow: inset 0 0 0 1px rgba($color: $color-alabaster, $alpha: 0.3);
+.input-group--dark {
+  color: $color-alabaster;
 
-      @include focus {
-        box-shadow: inset 0 0 0 1px $color-alabaster;
-      }
+  input,
+  select {
+    height: 50px;
+  }
 
-      @include active {
-        box-shadow: inset 0 0 0 1px $color-alabaster;
-      }
+  input,
+  select,
+  textarea {
+    color: $color-default-white;
+    box-shadow: inset 0 0 0 1px rgba($color: $color-alabaster, $alpha: 0.3);
 
-      @include disabled {
-        box-shadow: inset 0 0 0  1px rgba($color: $color-default-white, $alpha: 0.4);
-        background-color: rgba($color: $color-default-white, $alpha: 0.2);
-
-        &:disabled + label {
-          color: $color-alabaster;
-          opacity: 0.6;
-        }
-      }
+    @include focus {
+      box-shadow: inset 0 0 0 1px $color-alabaster;
     }
 
     @include active {
-      &:not(:has(:disabled)) {
-        input,
-        select,
-        textarea {
-          box-shadow: inset 0 0 0 1px $color-default-white;
-        }
-      }
+      box-shadow: inset 0 0 0 1px $color-alabaster;
     }
 
-    @include hover {
-      &:not(:has(:disabled)) {
-        label {
-          opacity: 1;
-        }
+    @include disabled {
+      box-shadow: inset 0 0 0  1px rgba($color: $color-default-white, $alpha: 0.4);
+      background-color: rgba($color: $color-default-white, $alpha: 0.2);
 
-        input,
-        select,
-        textarea {
-          box-shadow: inset 0 0 0 1px $color-default-white;
-        }
+      &:disabled + label {
+        color: $color-alabaster;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  @include active {
+    &:not(:has(:disabled)) {
+      input,
+      select,
+      textarea {
+        box-shadow: inset 0 0 0 1px $color-default-white;
+      }
+    }
+  }
+
+  @include hover {
+    &:not(:has(:disabled)) {
+      label {
+        opacity: 1;
+      }
+
+      input,
+      select,
+      textarea {
+        box-shadow: inset 0 0 0 1px $color-default-white;
       }
     }
   }
