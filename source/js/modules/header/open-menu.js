@@ -1,10 +1,13 @@
+import {ScrollLock} from '../../utils/scroll-lock';
+
 const header = document.querySelector('[data-header="container"]');
 const menu = header.querySelector('[data-header="menu"]');
 const toggleBtn = header.querySelector('[data-header="toggle"]');
 const body = document.body;
-const menuLinks = header.querySelectorAll('[data-mneu="link"]');
+const menuLinks = header.querySelectorAll('[data-menu="link"]');
 const sprite = toggleBtn.querySelector('use');
 const tabButtons = header.querySelectorAll('[data-menu="tab"]');
+const scrollLock = new ScrollLock();
 
 function createOverlay () {
   if (!header.querySelector('.overlay')) {
@@ -29,12 +32,14 @@ function closeMenu () {
   sprite.setAttribute('href', '__spritemap#sprite-menu');
   body.classList.remove('scroll-lock');
   removeOvelay();
+  scrollLock.enableScrolling();
 }
 
 function openMenu () {
   sprite.setAttribute('href', '__spritemap#sprite-cross');
   body.classList.add('scroll-lock');
   createOverlay();
+  scrollLock.disableScrolling();
 }
 
 function toggleClasses () {

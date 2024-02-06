@@ -2,7 +2,7 @@
 import Swiper from 'swiper';
 import {Pagination, Autoplay} from 'swiper/modules';
 
-const heroSwiper = new Swiper('[data-hero="swiper"]', {
+export const heroSwiper = new Swiper('[data-swiper="hero"]', {
   direction: 'horizontal',
   modules: [Pagination, Autoplay],
   loop: true,
@@ -12,7 +12,7 @@ const heroSwiper = new Swiper('[data-hero="swiper"]', {
   //   delay: 3000,
   // },
   pagination: {
-    el: '[data-hero="pagination"]',
+    el: '[data-pagination="hero"]',
     type: 'bullets',
     clickable: true,
     bulletActiveClass: 'hero__pagination-bullet--active',
@@ -28,8 +28,6 @@ const heroSwiper = new Swiper('[data-hero="swiper"]', {
     },
     1440: {
       allowTouchMove: false,
-    }
+    },
   },
 });
-
-export {heroSwiper};

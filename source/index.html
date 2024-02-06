@@ -43,7 +43,7 @@
 
               <!-- элемент 1 -->
               <li class="menu__item">
-                <a class="menu__link" href="#about" data-mneu="link">О проекте</a>
+                <a class="menu__link" href="#about" data-menu="link">О проекте</a>
               </li>
 
               <!-- элемент 2 -->
@@ -56,31 +56,31 @@
                 </button>
                 <ul class="menu__submenu" data-accordion="content">
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs"  data-mneu="link">Стажировки</a>
+                    <a class="menu__submenu-link" href="#programs"  data-menu="link">Стажировки</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs" data-mneu="link">Волонтёрство</a>
+                    <a class="menu__submenu-link" href="#programs" data-menu="link">Волонтёрство</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs" data-mneu="link">Учёба</a>
+                    <a class="menu__submenu-link" href="#programs" data-menu="link">Учёба</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#programs" data-mneu="link">Религия</a>
+                    <a class="menu__submenu-link" href="#programs" data-menu="link">Религия</a>
                   </li>
                 </ul>
               </li>
 
               <!-- элемент 3 -->
               <li class="menu__item">
-                <a class="menu__link" href="#grant" data-mneu="link">как поехать</a>
+                <a class="menu__link" href="#grant" data-menu="link">как поехать</a>
               </li>
 
               <!-- элемент 4 -->
               <li class="menu__item">
-                <a class="menu__link" href="#reviews" data-mneu="link">отзывы</a>
+                <a class="menu__link" href="#reviews" data-menu="link">отзывы</a>
               </li>
 
               <!-- элемент 5 -->
@@ -93,30 +93,30 @@
                 </button>
                 <ul class="menu__submenu" data-accordion="content">
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news" data-mneu="link">Общее</a>
+                    <a class="menu__submenu-link" href="#news" data-menu="link">Общее</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news" data-mneu="link">Волонтёрство</a>
+                    <a class="menu__submenu-link" href="#news" data-menu="link">Волонтёрство</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news" data-mneu="link">Стажировки</a>
+                    <a class="menu__submenu-link" href="#news" data-menu="link">Стажировки</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news" data-mneu="link">Карьера</a>
+                    <a class="menu__submenu-link" href="#news" data-menu="link">Карьера</a>
                   </li>
 
                   <li class="menu__submenu-item">
-                    <a class="menu__submenu-link" href="#news" data-mneu="link">Путешествия</a>
+                    <a class="menu__submenu-link" href="#news" data-menu="link">Путешествия</a>
                   </li>
                 </ul>
               </li>
 
               <!-- элемент 6 -->
               <li class="menu__item">
-                <a class="menu__link" href="#contacts" data-mneu="link">контакты</a>
+                <a class="menu__link" href="#contacts" data-menu="link">контакты</a>
               </li>
             </ul>
           </nav>
@@ -129,10 +129,10 @@
 
         <h1 class="visually-hidden">Проект "Стажировка"</h1>
 
-        <div class="swiper hero__swiper" data-hero="swiper">
+        <div class="swiper hero__swiper" data-swiper="hero">
 
           <div class="container">
-            <div class="hero__pagination" data-hero="pagination"></div>
+            <div class="hero__pagination" data-pagination="hero"></div>
           </div>
 
           <div class="hero__wrapper swiper-wrapper">
@@ -281,7 +281,7 @@
                     значимые изменения.
                   </p>
                 </div>
-                <button class="about__btn btn btn--main" type="button" data-open-modal="success">
+                <button class="about__btn btn btn--main" type="button" data-open-modal="form">
                   подробнее о проекте
                   <span>
                     <svg aria-hidden="true" focusable="false" width="10" height="10">
@@ -593,7 +593,298 @@
 
           <section class="reviews">
 
-            <!-- Отзывы -->
+            <div class="container">
+
+              <h2 class="reviews__title">Отзывы</h2>
+
+              <div class="reviews__slider swiper" data-swiper="reviews">
+
+                <div class="swiper-wrapper">
+                  <!-- Отзыв 1 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-2.webp 1x, img/reviews/photo-2@2x.webp 2x">
+                          <img src="img/reviews/photo-2.jpg" srcset="img/reviews/photo-2@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Давид <br>Иванов</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Volunteer Chance</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Лето 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
+                      </p>
+
+                      <blockquote>
+                        Каждый день был возможностью оказать ощутимое влияние на жизнь других людей.
+                        Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт.
+                        Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <!-- Отзыв 2 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-1.webp 1x, img/reviews/photo-1@2x.webp 2x">
+                          <img src="img/reviews/photo-1.jpg" srcset="img/reviews/photo-1@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Лола <br>Алекс</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Masa Art Challenge</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Осень 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Я могу с уверенностью сказать, что это был один из самых незабываемых опытов <br class="br-desktop">в жизни!
+                      </p>
+
+                      <blockquote>
+                        Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+                        Сочетание путешествий, общения и значимой работы действительно отличает её от других программ,
+                        <br class="br-tablet">и я чувствую огромную благодарность за предоставленную мне возможность.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <!-- Отзыв 3 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-2.webp 1x, img/reviews/photo-2@2x.webp 2x">
+                          <img src="img/reviews/photo-2.jpg" srcset="img/reviews/photo-2@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Давид <br>Иванов</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Volunteer Chance</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Лето 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Благодаря опыту стажировки я узнал <br class="br-desktop">так много нового о себе и об окружающем мире.
+                      </p>
+
+                      <blockquote>
+                        Каждый день был возможностью оказать ощутимое <br class="br-tablet">влияние <br class="br-desktop">на жизнь других людей.
+                        Я бы очень рекомендовал <br class="br-desktop">эту волонтёрскую программу всем, кто ищет значимый <br class="br-desktop-tablet">и
+                        незабываемый опыт. Организация была на высшем уровне. <br class="br-desktop">Для меня было
+                        честью быть частью такой удивительной инициативы.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <!-- Отзыв 4 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-1.webp 1x, img/reviews/photo-1@2x.webp 2x">
+                          <img src="img/reviews/photo-1.jpg" srcset="img/reviews/photo-1@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Лола <br>Алекс</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Masa Art Challenge</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Осень 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
+                      </p>
+
+                      <blockquote>
+                        Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+                        Сочетание путешествий, общения и значимой работы действительно отличает её от других программ,
+                        и я чувствую огромную благодарность за предоставленную мне возможность.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <!-- Отзыв 5 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-1.webp 1x, img/reviews/photo-1@2x.webp 2x">
+                          <img src="img/reviews/photo-1.jpg" srcset="img/reviews/photo-1@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Лола <br>Алекс</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Masa Art Challenge</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Осень 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
+                      </p>
+
+                      <blockquote>
+                        Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+                        Сочетание путешествий, общения и значимой работы действительно отличает её от других программ,
+                        и я чувствую огромную благодарность за предоставленную мне возможность.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <!-- Отзыв 6 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-2.webp 1x, img/reviews/photo-2@2x.webp 2x">
+                          <img src="img/reviews/photo-2.jpg" srcset="img/reviews/photo-2@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Давид <br>Иванов</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Volunteer Chance</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Лето 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
+                      </p>
+
+                      <blockquote>
+                        Каждый день был возможностью оказать ощутимое влияние на жизнь других людей.
+                        Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт.
+                        Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                  <!-- Отзыв 7 -->
+                  <div class="reviews__card swiper-slide">
+                    <div class="reviews__top">
+                      <div class="reviews__profile">
+                        <picture>
+                          <source type="image/webp" srcset="img/reviews/photo-1.webp 1x, img/reviews/photo-1@2x.webp 2x">
+                          <img src="img/reviews/photo-1.jpg" srcset="img/reviews/photo-1@2x.jpg 2x" width="90" height="90" alt="Фотография">
+                        </picture>
+                        <span>Лола <br>Алекс</span>
+                      </div>
+
+                      <div class="reviews__info">
+                        <div class="reviews__program">
+                          <b>программа</b>
+                          <span>Masa Art Challenge</span>
+                        </div>
+
+                        <div class="reviews__date">
+                          <b>Дата</b>
+                          <span>Осень 2022</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews__content">
+                      <p>
+                        Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!
+                      </p>
+
+                      <blockquote>
+                        Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+                        Сочетание путешествий, общения и значимой работы действительно отличает её от других программ,
+                        и я чувствую огромную благодарность за предоставленную мне возможность.
+                      </blockquote>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="reviews__pagination swiper-pagination" data-pagination="reviews" aria-label="Пагинация"></div>
+
+              </div>
+
+              <div class="reviews__navigation navigation">
+                <button class="navigation__btn navigation__btn--prev" data-reviews="btn-prev" aria-label="Переключиться на предыдущий слайд">
+
+                    <svg aria-hidden="true" focusable="false" width="12" height="12">
+                      <use href="__spritemap#sprite-arrow-left"></use>
+                    </svg>
+
+                </button>
+
+                <button class="navigation__btn navigation__btn--next" data-reviews="btn-next" aria-label="Переключиться на следующий слайд">
+
+                    <svg aria-hidden="true" focusable="false" width="12" height="12">
+                      <use href="__spritemap#sprite-arrow-left"></use>
+                    </svg>
+
+                </button>
+              </div>
+
+            </div>
 
           </section>
 
@@ -742,7 +1033,92 @@
 
       <div data-test="footer">
 
-        <!-- Футер -->
+        <div class="container">
+
+          <div class="footer__top">
+
+            <a class="footer__link">
+              <img src="img/svg/logotype.svg" alt="Лого" width="52" height="52">
+            </a>
+
+            <nav class="footer__nav">
+              <ul class="footer__list">
+
+                <!-- элемент 1 -->
+                <li class="footer__item">
+                  <a class="footer__link" href="#about">О проекте</a>
+                </li>
+
+                <!-- элемент 2 -->
+                <li class="footer__item">
+                  <a class="footer__link" href="#programs">Программы</a>
+                </li>
+
+                <!-- элемент 3 -->
+                <li class="footer__item">
+                  <a class="footer__link" href="#grant">Как поехать</a>
+                </li>
+
+                <!-- элемент 4 -->
+                <li class="footer__item">
+                  <a class="footer__link" href="#reviews">Отзывы</a>
+                </li>
+
+                <!-- элемент 5 -->
+                <li class="footer__item">
+                  <a class="footer__link" href="#news">Новости</a>
+                </li>
+
+                <!-- элемент 6 -->
+                <li class="footer__item">
+                  <a class="footer__link" href="#contacts">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+
+          <div class="footer__container">
+
+            <div class="footer__wrapper">
+              <a class="footer__privacy-policy" href="#">Политика конфиденциальности</a>
+              <span class="footer__copyright">Стажировка © 2023 Все права защищены</span>
+            </div>
+
+            <div class="footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+                    <span class="visually-hidden">Сайт "Вконтакте"</span>
+                    <svg aria-hidden="true" focusable="false" width="16" height="16">
+                      <use href="__spritemap#sprite-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="https://ok.ru" target="_blank" rel="noreferrer noopener">
+                    <span class="visually-hidden">Сайт "Одноклассники"</span>
+                    <svg aria-hidden="true" focusable="false" width="16" height="16">
+                      <use href="__spritemap#sprite-odnoklassniki"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="https://reddit.com" target="_blank" rel="noreferrer noopener">
+                    <span class="visually-hidden">Сайт "Reddit"</span>
+                    <svg aria-hidden="true" focusable="false" width="16" height="16">
+                      <use href="__spritemap#sprite-reddit"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
@@ -750,8 +1126,24 @@
 
   </div>
 
-  <!-- Модалка -->
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+  <!-- Уведомление об отправке -->
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="message">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal="true"></div>
+      <div class="modal__content">
+
+        <div class="success-message">
+          <p>
+            Сообщение отправлено!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Модалка с формой -->
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="form">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal="true"></div>
       <div class="modal__content">
@@ -824,7 +1216,7 @@
     </div>
   </div>
 
-  <script src="js/vendor.js" type="module"></script>
+  <script type="module" src="js/vendor.js"></script>
   <script type="module" src="js/main.js"></script>
 
 </body>

@@ -1,0 +1,43 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-cerulean-blue;
+  border: none;
+  outline: none;
+  background-color: $color-transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 6px;
+
+  svg {
+    max-width: 12px;
+    max-height: 12px;
+    pointer-events: none;
+  }
+
+  &--next svg {
+    transform: rotate(180deg);
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
+
+  @include disabled {
+    opacity: 1;
+    color: $color-mischka;
+    pointer-events: none;
+    cursor: default;
+  }
+}

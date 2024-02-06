@@ -1,13 +1,19 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './vendor/form-validate/form';
 import {initModals} from './vendor/modals/init-modals';
+
 import {clickToggleButton} from './modules/header/open-menu';
 import {scrollPage} from './modules/header/header-hide';
-import {heroSwiper} from './modules/swiper/swiper';
+
 import {initAccordions} from './vendor/accordion/init-accordion';
-import {initPhoneMask} from './modules/phone-mask/phone-mask';
+
 import {listNumeration} from './modules/grant/grant-list';
+
 import {submitForm} from './modules/form/submit-form';
+import {initPhoneMask} from './modules/phone-mask/phone-mask';
+
+import {heroSwiper} from './modules/swiper/hero-swiper';
+import {reviewsSwiper} from './modules/swiper/reviews-swiper';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -46,5 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
 
     heroSwiper.init();
+
+    reviewsSwiper.init();
   });
 });

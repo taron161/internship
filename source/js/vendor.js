@@ -4,9 +4,3 @@ import './vendor/focus-visible-polyfill';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-// Accordion
-import './vendor/accordion/accordions';
-
-// Модальное окно
-import './vendor/modals/modals';
