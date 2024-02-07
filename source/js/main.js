@@ -15,6 +15,7 @@ import {initPhoneMask} from './modules/phone-mask/phone-mask';
 import {heroSwiper} from './modules/swiper/hero-swiper';
 import {reviewsSwiper} from './modules/swiper/reviews-swiper';
 import {programsSwiper} from './modules/swiper/programs-swiper';
+import {tabsSwiper} from './modules/swiper/tabs';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -57,5 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
     reviewsSwiper.init();
 
     programsSwiper.init();
+
+    tabsSwiper.init();
   });
 });

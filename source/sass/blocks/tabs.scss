@@ -1,0 +1,17 @@
+.tabs.swiper {
+  @include vp-767 {
+    width: 557px;
+  }
+}
+
+.tabs {
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.tabs.swiper .swiper-wrapper {
+  padding: 2px 0;
+}
