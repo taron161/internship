@@ -177,6 +177,12 @@
 .input-group--dark {
   color: $color-alabaster;
 
+  select {
+    @include focus {
+      color: rgba($color: $color-charcoal, $alpha: 0.9);
+    }
+  }
+
   input,
   select {
     height: 50px;
