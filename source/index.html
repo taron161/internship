@@ -131,50 +131,57 @@
 
         <div class="swiper hero__swiper" data-swiper="hero">
 
-          <div class="container">
-            <div class="hero__pagination" data-pagination="hero"></div>
-          </div>
-
           <div class="hero__wrapper swiper-wrapper">
 
             <!-- Слайд 1 -->
-            <div class="swiper-slide">
+            <div class="hero__slide swiper-slide">
               <div class="hero__image">
                 <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="img/hero/mobile/photo-1.webp 1x, img/hero/mobile/photo-1@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="img/hero/tablet/photo-1.webp 1x, img/hero/tablet/photo-1@2x.webp 2x">
                   <source type="image/webp" srcset="img/hero/photo-1.webp 1x, img/hero/photo-1@2x.webp 2x">
+
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/hero/mobile/photo-1.jpg 1x, img/hero/mobile/photo-1@2x.jpg 2x">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/hero/tablet/photo-1.jpg 1x, img/hero/tablet/photo-1@2x.jpg 2x">
                   <img src="img/hero/photo-1.jpg" srcset="img/hero/photo-1@2x.jpg 2x" width="1440" height="800" alt="Фотография студентки">
                 </picture>
               </div>
 
               <div class="container">
-                <div class="hero__title">
-                  <h2>
-                    Глобальный профессиональный опыт обучения за рубежом
-                  </h2>
-                </div>
-                <div class="hero__bottom">
-                  <div class="hero__text">
-                    <p>
-                      Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!
-                    </p>
-                  </div>
 
-                  <div class="hero__btn-wrapper">
-                    <a class="hero__btn btn btn--main" href="#">
-                      подробнее
-                      <span>
-                        <svg aria-hidden="true" focusable="false" width="10" height="10">
-                          <use href="__spritemap#sprite-link"></use>
-                        </svg>
-                      </span>
-                    </a>
+                <div class="hero__content">
+                  <div class="hero__pagination" data-pagination="hero"></div>
+                  <div class="hero__title">
+                    <h2>
+                      Глобальный профессиональный опыт обучения <br class="br-mobile">за рубежом
+                    </h2>
+                  </div>
+                  <div class="hero__bottom">
+                    <div class="hero__text">
+                      <p>
+                        Погрузитесь в академическую программу, проходя практику <br class="br-tablet-mobile">в разных городах,
+                        ощущая настоящий студенческий стиль жизни!
+                      </p>
+                    </div>
+
+                    <div class="hero__btn-wrapper">
+                      <a class="hero__btn btn btn--main" href="#">
+                        подробнее
+                        <span>
+                          <svg aria-hidden="true" focusable="false" width="10" height="10">
+                            <use href="__spritemap#sprite-link"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
 
             <!-- Слайд 2 -->
-            <div class="swiper-slide">
+            <div class="hero__slide swiper-slide">
               <div class="hero__image">
                 <picture>
                   <source type="image/webp" srcset="img/hero/photo-2.webp 1x, img/hero/photo-2@2x.webp 2x">
@@ -183,34 +190,39 @@
               </div>
 
               <div class="container">
-                <div class="hero__title">
-                  <h2>
-                    Волонтёрские программы - внесите свой вклад в общество
-                  </h2>
-                </div>
-                <div class="hero__bottom">
-                  <div class="hero__text">
-                    <p>
-                      Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
-                    </p>
-                  </div>
 
-                  <div class="hero__btn-wrapper">
-                    <a class="hero__btn btn btn--main" href="#">
-                      подробнее
-                      <span>
-                        <svg aria-hidden="true" focusable="false" width="10" height="10">
-                          <use href="__spritemap#sprite-link"></use>
-                        </svg>
-                      </span>
-                    </a>
+                <div class="hero__content">
+                  <div class="hero__pagination" data-pagination="hero"></div>
+                  <div class="hero__title">
+                    <h2>
+                      Волонтёрские программы - внесите свой вклад в общество
+                    </h2>
+                  </div>
+                  <div class="hero__bottom">
+                    <div class="hero__text">
+                      <p>
+                        Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.
+                      </p>
+                    </div>
+
+                    <div class="hero__btn-wrapper">
+                      <a class="hero__btn btn btn--main" href="#">
+                        подробнее
+                        <span>
+                          <svg aria-hidden="true" focusable="false" width="10" height="10">
+                            <use href="__spritemap#sprite-link"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
 
             <!-- Слайд 3 -->
-            <div class="swiper-slide">
+            <div class="hero__slide swiper-slide">
               <div class="hero__image">
                 <picture>
                   <source type="image/webp" srcset="img/hero/photo-3.webp 1x, img/hero/photo-3@2x.webp 2x">
@@ -219,29 +231,34 @@
               </div>
 
               <div class="container">
-                <div class="hero__title">
-                  <h2>
-                    Программы стажировок в крупнейших компаниях мира
-                  </h2>
-                </div>
-                <div class="hero__bottom">
-                  <div class="hero__text">
-                    <p>
-                      Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
-                    </p>
-                  </div>
 
-                  <div class="hero__btn-wrapper">
-                    <a class="hero__btn btn btn--main" href="#">
-                      подробнее
-                      <span>
-                        <svg aria-hidden="true" focusable="false" width="10" height="10">
-                          <use href="__spritemap#sprite-link"></use>
-                        </svg>
-                      </span>
-                    </a>
+                <div class="hero__content">
+                  <div class="hero__pagination" data-pagination="hero"></div>
+                  <div class="hero__title">
+                    <h2>
+                      Программы стажировок в крупнейших компаниях мира
+                    </h2>
+                  </div>
+                  <div class="hero__bottom">
+                    <div class="hero__text">
+                      <p>
+                        Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
+                      </p>
+                    </div>
+
+                    <div class="hero__btn-wrapper">
+                      <a class="hero__btn btn btn--main" href="#">
+                        подробнее
+                        <span>
+                          <svg aria-hidden="true" focusable="false" width="10" height="10">
+                            <use href="__spritemap#sprite-link"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -862,12 +879,12 @@
 
                 </div>
 
-                <div class="reviews__pagination swiper-pagination" data-pagination="reviews" aria-label="Пагинация"></div>
+                <div class="reviews__pagination swiper-pagination" data-pagination="reviews"></div>
 
               </div>
 
               <div class="reviews__navigation navigation">
-                <button class="navigation__btn navigation__btn--prev" data-reviews="btn-prev" aria-label="Переключиться на предыдущий слайд">
+                <button class="navigation__btn navigation__btn--prev" type="button" data-reviews="btn-prev" aria-label="Переключиться на предыдущий слайд">
 
                     <svg aria-hidden="true" focusable="false" width="12" height="12">
                       <use href="__spritemap#sprite-arrow-left"></use>
@@ -875,7 +892,7 @@
 
                 </button>
 
-                <button class="navigation__btn navigation__btn--next" data-reviews="btn-next" aria-label="Переключиться на следующий слайд">
+                <button class="navigation__btn navigation__btn--next" type="button" data-reviews="btn-next" aria-label="Переключиться на следующий слайд">
 
                     <svg aria-hidden="true" focusable="false" width="12" height="12">
                       <use href="__spritemap#sprite-arrow-left"></use>

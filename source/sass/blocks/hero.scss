@@ -1,15 +1,3 @@
-.hero__swiper {
-  min-height: 800px;
-
-  @include vp-1439 {
-    min-height: 1024px;
-  }
-
-  @include vp-767 {
-    min-height: 568px;
-  }
-}
-
 .hero__image {
   img {
     position: absolute;
@@ -19,7 +7,6 @@
     width: 100%;
     min-height: 800px;
     object-fit: contain;
-    transform: translateY(-250px);
 
     @include vp-1439 {
       object-fit: cover;
@@ -32,7 +19,14 @@
   }
 }
 
-.hero .container {
+.hero__content {
+  position: absolute;
+  bottom: 60px;
+
+  @include vp-767 {
+    bottom: 20px;
+  }
+
   h2,
   p {
     margin: 0;
@@ -41,18 +35,20 @@
 
 .hero__title {
   width: 968px;
-  padding: 40px 50px 30px;
+  padding: 50px 50px 20px;
   border-radius: 0 30px 30px 0;
   background-color: $color-default-white;
+  transform: translateY(17px);
 
   @include vp-1439 {
     width: 659px;
     padding: 30px 40px 24px;
+    transform: translateY(4px);
   }
 
   @include vp-767 {
     width: 290px;
-    padding: 20px 14px 16px;
+    padding: 19px 14px 16px;
     border-radius: 0 16px 16px 0;
   }
 
@@ -61,10 +57,12 @@
     font-size: 54px;
     line-height: 62px;
     color: $color-cerulean-blue;
+    transform: translateY(-10px);
 
     @include vp-1439 {
       font-size: 36px;
       line-height: 44px;
+      transform: translateY(1px);
     }
 
     @include vp-767 {
@@ -75,10 +73,11 @@
 }
 
 .hero__bottom {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 772px;
-  padding: 0 50px 35px;
+  padding: 10px 50px 28px;
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -96,14 +95,44 @@
     background-color: $color-transparent;
     padding: 0;
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/svg/angle.svg");
+    top: 17px;
+    right: -26px;
+
+    @include vp-1439 {
+      top: 4px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .hero__text {
   @include vp-767 {
+    position: relative;
     width: 267px;
     border-radius: 0 0 14px;
-    padding: 0 42px 15px 14px;
+    padding: 0 42px 10px 14px;
     background-color: $color-default-white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-image: url("../../img/svg/angle-mobile.svg");
+      top: 4px;
+      right: -10px;
+      transform: rotate(90deg);
+    }
   }
 
   p {
@@ -123,26 +152,42 @@
 
 .hero__btn {
   width: 196px;
+  padding-left: 30px;
+
+  @include vp-1439 {
+    transform: translateY(-19px);
+  }
 
   @include vp-767 {
     width: 152px;
+    padding-left: 20px;
+    transform: none;
   }
 }
 
 .hero__btn-wrapper {
   @include vp-767 {
+    position: relative;
     width: max-content;
     padding: 10px 15px;
     background-color: $color-default-white;
     border-radius: 0 0 14px 14px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-image: url("../../img/svg/angle-mobile.svg");
+      top: 0;
+      right: -10px;
+      transform: rotate(90deg);
+    }
   }
 }
 
-.hero__pagination {
-  margin-top: 210px;
+.hero__pagination.swiper-pagination-clickable.swiper-pagination-bullets {
   position: relative;
-  transform: translateY(10px);
-  z-index: 10;
   display: flex;
   flex-wrap: wrap;
   width: 94px;
@@ -150,21 +195,44 @@
   background-color: $color-default-white;
   padding: 14px 20px;
   border-radius: 20px 20px 0 0;
+  transform: translateY(25px);
+
+  @include vp-1439 {
+    transform: translateY(12px);
+    border-radius: 12px 12px 0 0;
+  }
 
   @include vp-767 {
     padding: 10px 16px;
+    width: 80px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/svg/angle-small.svg");
+    bottom: 0;
+    right: -20px;
+
+    @include vp-767 {
+      background-image: url("../../img/svg/angle-mobile.svg");
+      width: 10px;
+      height: 10px;
+      right: -10px;
+    }
   }
 }
 
-.hero__pagination-bullet {
+.hero__pagination.swiper-pagination-clickable .swiper-pagination-bullet {
   outline: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: $color-default-white;
   box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-  margin: 0;
-  padding: 0;
+  opacity: 1;
 
   @include vp-767 {
     width: 8px;
@@ -172,15 +240,30 @@
   }
 }
 
-.hero__pagination-bullet:not(.hero__pagination-bullet--active) {
+.hero__pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.hero__pagination.swiper-pagination-clickable .swiper-pagination-bullet-active {
+  background-color: $color-cerulean-blue;
+  box-shadow: none;
+}
+
+.hero__pagination.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
   @include hover-focus {
     background-color: $color-default-white;
     box-shadow: inset 0 0 0 1px $color-cerulean-blue;
   }
 }
 
-.hero__pagination-bullet--active,
-.hero__pagination-bullet--current {
-  background-color: $color-cerulean-blue;
-  box-shadow: none;
+.swiper-autoheight .hero__slide.swiper-slide {
+  min-height: 800px;
+
+  @include vp-1439 {
+    min-height: 1024px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+  }
 }

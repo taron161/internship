@@ -8,16 +8,20 @@ export const heroSwiper = new Swiper('[data-swiper="hero"]', {
   loop: true,
   init: false,
   autoHeight: true,
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 3000,
+  },
   pagination: {
-    el: '[data-pagination="hero"]',
+    el: '.swiper-slide-active [data-pagination="hero"]',
     type: 'bullets',
     clickable: true,
-    bulletActiveClass: 'hero__pagination-bullet--active',
-    bulletClass: 'hero__pagination-bullet',
-    currentClass: 'hero__pagination-bullet--current',
+  },
+  on: {
+    beforeTransitionStart: function () {
+      this.pagination.init();
+      this.pagination.render();
+      this.pagination.update();
+    }
   },
   breakpoints: {
     0: {
