@@ -15,7 +15,10 @@ import {initPhoneMask} from './modules/phone-mask/phone-mask';
 import {heroSwiper} from './modules/swiper/hero-swiper';
 import {reviewsSwiper} from './modules/swiper/reviews-swiper';
 import {programsSwiper} from './modules/swiper/programs-swiper';
-import {tabsSwiper} from './modules/swiper/tabs';
+import {newsSwiper} from './modules/swiper/news';
+
+import {onClickTab} from './modules/news/news';
+import {setSlidesNumbers} from './modules/news/news';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -40,6 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Валидация и отправка формы
   submitForm();
 
+
+  onClickTab();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
@@ -59,6 +65,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     programsSwiper.init();
 
-    tabsSwiper.init();
+    newsSwiper.init();
+
+    setSlidesNumbers();
   });
 });
