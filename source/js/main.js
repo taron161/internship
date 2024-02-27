@@ -19,6 +19,8 @@ import {newsSwiper} from './modules/swiper/news';
 
 import {onClickTab} from './modules/news/news';
 import {setSlidesNumbers} from './modules/news/news';
+
+import {CustomSelect} from './vendor/select/custom-select';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -52,6 +54,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
+    const select = new CustomSelect();
+    select.init();
 
     initPhoneMask();
 

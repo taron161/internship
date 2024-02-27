@@ -29,7 +29,7 @@
   }
 
   input,
-  select,
+  .custom-select__button,
   textarea {
     width: 100%;
     border: none;
@@ -88,7 +88,7 @@
       }
 
       input,
-      select,
+      .custom-select__button,
       textarea {
         box-shadow: inset 0 0 0 1px $color-charcoal;
       }
@@ -102,14 +102,14 @@
       }
 
       input,
-      select,
+      .custom-select__button,
       textarea {
         box-shadow: inset 0 0 0 1px $color-charcoal;
       }
     }
   }
 
-  select {
+  .custom-select__button {
     appearance: none;
     transform: translateY(2px);
     margin-bottom: 5px;
@@ -132,10 +132,6 @@
     &:focus ~ svg {
       transform: rotate(180deg);
     }
-  }
-
-  select option:first-child {
-    display: none;
   }
 
   svg {
@@ -174,22 +170,24 @@
   }
 }
 
+.input-group .custom-select__icon {
+  background-color: $color-charcoal;
+}
+
+.input-group--dark .custom-select__icon {
+  background-color: $color-default-white;
+}
+
 .input-group--dark {
   color: $color-alabaster;
 
-  select {
-    @include focus {
-      color: rgba($color: $color-charcoal, $alpha: 0.9);
-    }
-  }
-
   input,
-  select {
+  .custom-select__button {
     height: 50px;
   }
 
   input,
-  select,
+  .custom-select__button,
   textarea {
     color: $color-default-white;
     box-shadow: inset 0 0 0 1px rgba($color: $color-alabaster, $alpha: 0.3);
@@ -216,7 +214,7 @@
   @include active {
     &:not(:has(:disabled)) {
       input,
-      select,
+      .custom-select__button,
       textarea {
         box-shadow: inset 0 0 0 1px $color-default-white;
       }
@@ -230,10 +228,54 @@
       }
 
       input,
-      select,
+      .custom-select__button,
       textarea {
         box-shadow: inset 0 0 0 1px $color-default-white;
       }
     }
+  }
+}
+
+.input-group.custom-select.is-invalid .custom-select__button {
+  border: none;
+  box-shadow: inset 0 0 0 1px #ff5e66;
+  background: rgba($color: #ff5e66, $alpha: 0.2);
+}
+
+.input-group.custom-select .custom-select__list {
+  border: none;
+  outline: none;
+  box-shadow: inset 0 0 0 1px $color-charcoal;
+  border-radius: 8px;
+  bottom: 26px;
+}
+
+.input-group--dark.custom-select .custom-select__list {
+  box-shadow: inset 0 0 0 1px $color-default-white;
+}
+
+.input-group.custom-select .custom-select__item {
+  padding: 17px 20px;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.input-group--dark.custom-select .custom-select__item {
+  color: $color-charcoal;
+}
+
+.input-group.custom-select .custom-select__item {
+  @include hover-focus {
+    border: none;
+    outline: none;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+  }
+
+  @include active {
+    border: none;
+    outline: none;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
   }
 }
